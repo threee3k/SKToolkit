@@ -61,8 +61,14 @@ then
     cd categorys/wifiattacks
     clear
     ./wifiattacks.sh
+    bash wifiattacks.sh
+fi
 
-    
-
-fi 
+if [[ $ATTACKCATEGORY == '2' ]]
+then
+  cd categorys/websiteattacks
+  clear
+  ./websiteattacks.sh
+  bash websiteattacks.sh
+fi
 
