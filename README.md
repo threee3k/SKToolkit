@@ -6,6 +6,8 @@ Swiss Knife Toolkit, or SKToolkit for short, Is an All-in-one toolkit filled wit
 # Installation
 To install SKToolkit, simply go to your terminal and type:
 ``` git clone https://github.com/threee3k/SKToolkit.git ```
+cd into SKT/maintool and then execute skt.sh
+```./skt.sh ``` or ``` bash skt.sh ```
 Note: You need to install some other stuff in order to properly run the tool with no errors, read requirments.txt.
 And that's it !
 
