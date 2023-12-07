@@ -1,0 +1,5 @@
+python3-requests 
+python3-colorama
+python3-psutil
+netcat
+aircrack-ng
