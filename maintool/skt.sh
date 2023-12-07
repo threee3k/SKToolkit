@@ -40,6 +40,7 @@ echo "
         \/                \/     \/           \/    \/              \/                              
 
 "
+echo "made by threee3k/3lka"
 sleep 2
 echo "Welcome to SKT, Swiss Knife Tool, an all in one hacking script made simple!"
 echo "Visit the Github page for instructions"
