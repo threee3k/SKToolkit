@@ -38,10 +38,11 @@ echo "You choose the website attacks section! choose an attack below"
 echo "under construction"
 echo "return to main menu(99)"
 read WEBATTACK
-if [[ $WEBATTACK == '99']]
+if [[ $WEBATTACK == '99' ]]
 then
     cd .. 
     cd ..
     clear 
     ./skt.sh
     bash skt.sh
+fi
