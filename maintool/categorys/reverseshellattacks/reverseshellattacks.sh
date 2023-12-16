@@ -41,6 +41,7 @@ echo "NetCat reverse shell LINUX TO LINUX(1)"
 echo "----------------------"
 echo "NetCat reverse shell LINUX TO WINDOWS POWERSHELL(2)"
 echo "----------------------"
+echo "BYOB reverse shell attack(3)"
 echo "return to main menu(99)"
 
 
@@ -77,3 +78,15 @@ then
     clear 
     ./skt.sh
     bash skt.sh
+
+
+if [[ $SHELLTY == '3' ]]
+then
+    clear
+    cd byob/byob/
+    sudo apt install python3-opencv
+    sleep 1
+    konsole -e python3 setup.py
+    sleep 2
+    konsole -e python3 server.py
+    konsole -e python3 client.py
