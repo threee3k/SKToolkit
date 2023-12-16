@@ -90,3 +90,4 @@ then
     sleep 2
     konsole -e python3 server.py
     konsole -e python3 client.py
+fi
