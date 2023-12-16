@@ -82,8 +82,8 @@ then
 
 if [[ $SHELLTY == '3' ]]
 then
-    clear
-    cd byob/byob/
+    cd ..
+    cd websiteattacks/byob/byob
     sudo apt install python3-opencv
     sleep 1
     konsole -e python3 setup.py
