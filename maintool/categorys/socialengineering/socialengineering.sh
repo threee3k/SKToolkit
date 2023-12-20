@@ -103,5 +103,6 @@ then
   read ZIPNAME
   cd $ZIPLOC
   zip2john $ZIPNAME
+
   
 fi
