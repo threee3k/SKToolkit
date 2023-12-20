@@ -92,3 +92,16 @@ then
   cd blackeye/
   konsole -e bash blackeye.sh
 fi
+
+
+if [[ $SOCATTACK == '4' ]]
+then
+  echo "This will crack ZIP files using john the ripper"
+  echo "Enter ZIP file location"
+  read ZIPLOC
+  echo "Enter ZIP file name"
+  read ZIPNAME
+  cd $ZIPLOC
+  zip2john $ZIPNAME
+  
+fi
