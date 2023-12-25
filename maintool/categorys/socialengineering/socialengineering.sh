@@ -41,6 +41,10 @@ echo "Find Phone number location and service(2)"
 echo "-------------------------"
 echo "Credential Harvesting sites(3)"
 echo "-------------------------"
+echo "Crack ZIP files using john the ripper(4)"
+echo "-------------------------"
+echo "Email Bomber(5)"
+echo "-------------------------"
 
 
 
@@ -103,6 +107,12 @@ then
   read ZIPNAME
   cd $ZIPLOC
   zip2john $ZIPNAME
-
   
+fi
+
+if [[ $SOCATTACK == '5' ]]
+then
+  clear
+  python3 emailbomber.py
+
 fi
