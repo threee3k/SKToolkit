@@ -50,6 +50,8 @@ echo "HTTP-Get attack(6)"
 echo "------------------------------------------"
 echo "BotNet attacks(7)"
 echo "------------------------------------------"
+echo "Host Tor site(8)"
+echo "------------------------------------------"
 
 
 
@@ -137,4 +139,43 @@ then
     clear
     ./botnets.sh
     bash botnets.sh
+fi
+
+if [[ $ATTACKTY == '8' ]]
+then
+    clear
+    echo "IF YOU USED THIS BEFORE JUST DO sudo service tor start AND sudo service nginx start TO START YOUR SITE"
+    sleep 2
+    echo "This will host a hidden-service tor site"
+    echo "Use service tor stop  service nginx stop   to stop it"
+    sleep 1
+    sudo apt install tor
+    sudo apt install nginx
+    clear
+    echo "Scroll down and uncomment HiddenServiceDir and HiddenServicePort, if there are none exit out of it"
+    sleep 3
+    sudo nano /etc/tor/torrc
+    sleep 1
+    sudo service tor stop
+    sudo service tor start
+    sudo service tor status
+    sudo cat /var/lib/tor/hidden_service/hostname
+    echo "This is your onion address, now we're gonna add some html code to it!"
+    sleep 3
+    sudo service tor stop
+    echo "Scroll down and uncomment server_tokens off;  and server_name_in_redirect off"
+    sleep 5
+    sudo nano /etc/nginx/nginx.conf
+    sleep 2
+    sudo service nginx restart
+    cd /var/www/html
+    sudo rm index.nginx-debian.html
+    sudo touch index.html
+    echo "Please enter your site's HTML code if you've ran this command before just CTRL+C out of it, if you wish to add CSS.. cd into /var/www/html "
+    sleep 5
+    nano index.html
+    sudo service nginx start
+    sudo service tor start
+    sudo service tor status
+
 fi
