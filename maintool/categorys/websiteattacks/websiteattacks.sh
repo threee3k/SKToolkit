@@ -52,6 +52,8 @@ echo "BotNet attacks(7)"
 echo "------------------------------------------"
 echo "Host Tor site(8)"
 echo "------------------------------------------"
+echo "Nmap helper(9)"
+echo "-----------------------------------------"
 
 
 
@@ -177,5 +179,15 @@ then
     sudo service nginx start
     sudo service tor start
     sudo service tor status
+
+fi
+
+
+if [[ $ATTACKTY == '9' ]]
+then
+    clear
+    echo "A tool to help with Nmap's dashes/ticks"
+    sudo bash nmaper.sh
+    sudo ./nmaper.sh
 
 fi
