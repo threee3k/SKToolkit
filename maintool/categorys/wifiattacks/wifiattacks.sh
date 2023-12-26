@@ -114,3 +114,10 @@ then
     echo "A new terminal will be opened, please fill the inputs in it"
     konsole -e ./wordlistbases.sh
 fi 
+
+if [[ $ATTACKTY == '8' ]]
+then
+    echo "This will launch a tool called routersploit"
+    sudo apt install routersploit
+    routersploit
+fi
